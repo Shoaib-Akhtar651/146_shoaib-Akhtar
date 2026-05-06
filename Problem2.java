@@ -13,7 +13,6 @@ public class Problem2 {
 
         int K = sc.nextInt();
 
-        
         int rem = A[0] % K;
         for (int i = 1; i < N; i++) {
             if (A[i] % K != rem) {
@@ -22,9 +21,11 @@ public class Problem2 {
             }
         }
 
-        
+
         Arrays.sort(A);
+
         int median = A[N / 2];
+
         long totalSteps = 0;
         for (int i = 0; i < N; i++) {
             totalSteps += Math.abs(A[i] - median) / K;
